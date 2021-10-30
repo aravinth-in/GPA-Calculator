@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<script src="ho.js"></script>    
+<style>
+ body {
+    background-color: #2f46791f;
+    color: #769edc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    min-height: 100vh;
+}
+ .r{
+     border:1px solid;
+     background: #e8edff;
+     height: 20px;
+ }
+
+ .rr{
+     border:1px solid;
+     background: #c1ccf1;
+     height: 20px;
+ }
+ 
+ .rt{
+     border:1px solid;
+     background: #e8edff;
+     height: 20px;
+ }
+
+ .rtt{
+     border:1px solid;
+     text-align: center;
+     background: #e8edff;
+     height: 20px;
+     width: 20%;
+     
+ }
+ 
+section{
+    margin: 5px;
+    border: 1px solid;
+    text-align: center;
+    width: 900px;
+    padding: 50px;
+    background: #3260b4fd;
+}
+
+#error{
+    color: rgb(233, 17, 17);
+}
+ </style>
+ 
+</head>
+<body>
+    <section>
+     
+     <h1>GPA Calculator</h1>
+    
+     <form>
+     <input type="text" id="cr" placeholder="Course Code"><br>
+     <input type="number" id="mr" placeholder="Mark"><br>
+     <input type="number" id="ch" placeholder="Credit Hours">
+     </form>
+     <button onclick="addRecord()">Add a record</button><br>
+     <button onclick="refreshElement()">REST</button>
+ <center>  
+     <p id="error"><p>
+ <table style="width:100%">
+     <tr>
+        <th class="rr">Course Code</th>
+        <th class="rr">Credits Hours</th>
+        <th class="rr">Marks</th>
+        <th class="rr">Grade</th>
+        <th class="rr">Points</th>
+        <th class="rr">Total Points</th>
+     </tr>
+     <tr>
+         <td class="r" id="courseNumber1"></td>
+         <td class="r" id="classhour1"></td>        
+         <td class="r" id="mark1"></td>
+         <td class="r" id="grade1"></td>
+         <td class="r" id="gpa1"></td>
+         <td class="r" id="totalpoints1"></td>    
+     </tr>
+     <tr>
+         <td class="rt" id="Scn">Total Marks</td>
+         <td class="rt" id="totalcredits"></td>
+         <td class="rt" id="total"></td>
+         <td class="rt"></td>
+         <td class="rt"></td>
+         <td class="rt" id="totalpoints"></td>
+
+     </tr>
+  
+ </table>
+ <p class="rtt" id="cgpa"></p>
+ 
+ </center>
+  </section>
+      
+      <script>
+    
+    displayCourses();
+    
+    </script>
+ 
+</body>
+
+</HTML>
